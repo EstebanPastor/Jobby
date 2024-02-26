@@ -1,9 +1,11 @@
-
+import Input from "../input/Input";
 
 const SearchForm = () => {
   return (
-    <div></div>
-  )
-}
+    <div>
+     
+    </div>
+  );
+};
 
-export default SearchForm
+export default SearchForm;

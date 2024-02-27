@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-12 grid-col-1 items-center gap-[30px]">
           <div className="lg:col-span-6">
             <img
-              src="contact.png"
+              src="/contact.png"
               alt="contact-image"
               className="h-auto max-w-full"
             />

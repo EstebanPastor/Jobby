@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/ui/navbar/NavBar";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import Footer from "@/components/ui/footer/Footer";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <EdgeStoreProvider>
           <NavBar />
           {children}
+          <Footer />
         </EdgeStoreProvider>
       </body>
     </html>

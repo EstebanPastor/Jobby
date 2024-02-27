@@ -16,19 +16,22 @@ const JobsCards = ({ job }: JobsCardProps) => {
         <div className="flex justify-between">
           <div>
             <Image
-              src={job.img}
+              src={job.img ? job.img : "/fallbackimage.png"}
               height={40}
               width={40}
               alt={`${job.author} logo`}
             />
             <h2 className="text-sm">{job.author}</h2>
           </div>
-          <h2>{job.salary}k/month</h2>
+          <h2>{job.salary}k/year</h2>
         </div>
+
         <div className="mt-3 text-xl">
           <h3>{job.name}</h3>
           <p>{job.location}</p>
-          <span className="bg-purple-600 text-xs px-3 rounded-md text-white">{job.employmentType}</span>
+          <span className="bg-purple-600 text-xs px-3 rounded-md text-white">
+            {job.employmentType}
+          </span>
         </div>
       </div>
     </Link>

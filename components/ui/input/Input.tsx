@@ -61,7 +61,7 @@ const Input: React.FC<InputProps> = ({
       {...register}
       onChange={onChange}
       className={clsx(
-        `block w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-purple-600 sm:text-sm sm:leading-6 mb-5`,
+        `block w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-purple-600 sm:text-sm sm:leading-6`,
         errors && errors[id] && "ring-rose-700",
         disabled && "opacity-50 cursor-default",
         noBorder && "ring-0 shadow-none mb-5"
@@ -78,7 +78,15 @@ const Input: React.FC<InputProps> = ({
           {label}:
         </label>
       )}
-      <div>{inputElement}</div>
+      <div>
+        {inputElement}
+        {errors && errors[id] && (
+          <span className="text-red-600 text-sm">
+            {errors[id]?.message && <>{errors[id]?.message}</>}
+            {!errors[id]?.message && `${label} is required`}
+          </span>
+        )}
+      </div>
     </div>
   );
 };

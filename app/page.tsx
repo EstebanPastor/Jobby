@@ -1,5 +1,6 @@
 import Jobs from "@/components/shared/jobs/Jobs";
 import Hero from "@/components/ui/hero/Hero";
+import Sponsors from "@/components/ui/sponsors/Sponsors";
 
 import { prisma } from "@/lib/prisma";
 
@@ -10,6 +11,7 @@ const Home = async () => {
     <>
       <Hero jobs={jobs}/>
       <Jobs />
+      <Sponsors />
     </>
   );
 };

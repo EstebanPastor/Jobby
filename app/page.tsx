@@ -1,5 +1,6 @@
 import Jobs from "@/components/shared/jobs/Jobs";
 import About from "@/components/ui/about/About";
+import Contact from "@/components/ui/contact/Contact";
 import Hero from "@/components/ui/hero/Hero";
 import Sponsors from "@/components/ui/sponsors/Sponsors";
 
@@ -14,6 +15,7 @@ const Home = async () => {
       <Jobs />
       <Sponsors />
       <About />
+      <Contact />
     </>
   );
 };

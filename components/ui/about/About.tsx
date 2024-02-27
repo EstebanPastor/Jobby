@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -14,12 +13,7 @@ const About = () => {
             professional or just starting out, we have a diverse range of
             positions to suit your skills and ambitions.
           </p>
-          <Image
-            src={"/signature.png"}
-            width={400}
-            height={400}
-            alt="workify-signature"
-          />
+         
         </div>
       </div>
     </div>

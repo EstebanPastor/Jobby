@@ -1,6 +1,11 @@
+import { jobType } from "@/types/jobTypes";
 import SearchForm from "../search-form/SearchForm";
 
-const Hero = () => {
+interface HeroProps {
+  jobs: jobType[];
+}
+
+const Hero = ({jobs}: HeroProps) => {
   return (
     <div
       id="home"
@@ -18,7 +23,7 @@ const Hero = () => {
             100,000 jobs listed here! Find yours today.
           </span>
         </div>
-        <SearchForm />
+        <SearchForm jobs={jobs}/>
       </div>
     </div>
   );

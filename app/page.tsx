@@ -1,4 +1,5 @@
 import Jobs from "@/components/shared/jobs/Jobs";
+import About from "@/components/ui/about/About";
 import Hero from "@/components/ui/hero/Hero";
 import Sponsors from "@/components/ui/sponsors/Sponsors";
 
@@ -12,6 +13,7 @@ const Home = async () => {
       <Hero jobs={jobs}/>
       <Jobs />
       <Sponsors />
+      <About />
     </>
   );
 };
